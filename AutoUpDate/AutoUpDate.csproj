@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="Downloader" Version="3.1.0-beta" />
+    <PackageReference Include="MaterialDesignColors" Version="3.0.0-ci508" />
+    <PackageReference Include="MaterialDesignThemes" Version="5.0.0-ci508" />
+    <PackageReference Include="MaterialDesignThemes.MahApps" Version="3.0.0-ci508" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="ShowMeTheXAML.MSBuild" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="ResourceDictionary\Dictionary.xaml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+  <Import Project="..\SharedProject\SharedProject.projitems" Label="Shared" />
+</Project>

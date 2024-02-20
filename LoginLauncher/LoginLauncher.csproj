@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Assets\icons\mrtx.png" />
+    <None Remove="Assets\icons\wlyzlogo.png" />
+    <None Remove="Assets\icons\安全.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="RestSharp" Version="110.2.1-alpha.0.16" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Management" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShellToolBox\ShellToolBox.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icons\mrtx.png" />
+    <Resource Include="Assets\icons\wlyzlogo.png" />
+    <Resource Include="Assets\icons\安全.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\RechargeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

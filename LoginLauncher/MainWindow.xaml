@@ -1,0 +1,151 @@
+﻿<Window
+    x:Class="LoginLauncher.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:LoginLauncher"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="700"
+    Height="500"
+    AllowsTransparency="True"
+    Background="{DynamicResource MaterialDesignPaper}"
+    KeyDown="Window_KeyDown"
+    Loaded="Window_Loaded"
+    MouseLeftButtonDown="Window_MouseLeftButtonDown"
+    TextElement.FontSize="14"
+    TextElement.FontWeight="Medium"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+
+    <Border Background="#FF2B2D34" CornerRadius="0">
+        <Grid Background="#FF2B2D34">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1" Margin="0">
+
+                <ListBox
+                    Name="myListBox"
+                    Grid.Row="1"
+                    Background="#2A2B31"
+                    BorderThickness="0,0,0,0"
+                    FontSize="25">
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="Margin" Value="0,0,0,10" />
+
+                            <!--这里的Margin控制间隔-->
+
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                    <ListBoxItem
+                        HorizontalContentAlignment="Center"
+                        Content="登录"
+                        Foreground="#16C675"
+                        Selected="ListBoxItem_Selected" />
+                    <ListBoxItem
+                        HorizontalContentAlignment="Center"
+                        Content="注册"
+                        Foreground="#16C675"
+                        PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown" />
+                    <ListBoxItem
+                        HorizontalContentAlignment="Center"
+                        Content="关于"
+                        Foreground="#16C675"
+                        Selected="ListBoxItem_Selected" />
+                </ListBox>
+
+            </Grid>
+            <Grid Grid.Column="0" Margin="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <!--  左侧列  -->
+                <Border
+                    Grid.Row="0"
+                    Margin="0"
+                    Panel.ZIndex="1"
+                    Background="#2A2B31">
+                    <!--  圆形头像  -->
+                    <Ellipse
+                        Width="90"
+                        Height="90"
+                        Margin="0,25,0,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top">
+                        <Ellipse.Fill>
+                            <!--  填充网络图片  -->
+                            <ImageBrush ImageSource="Assets/icons/mrtx.png" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+                </Border>
+
+
+            </Grid>
+
+            <!--  右侧列  -->
+            <Border
+                Grid.Row="0"
+                Grid.Column="1"
+                Background="#FF292B30">
+                <!--  此处放置右侧列的内容  -->
+                <!--  添加阴影效果  -->
+                <Border.Effect>
+                    <DropShadowEffect
+                        Direction="270"
+                        Opacity="0.5"
+                        ShadowDepth="1"
+                        Color="Gray" />
+                </Border.Effect>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="86" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Image Visibility="Hidden"
+                        x:Name="image"
+                        Grid.Row="0"
+                        Margin="0,11,0,0"
+                        Source="Assets/icons/wlyzlogo.png" />
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Width="33"
+                            Height="33"
+                            Margin="0"
+                            HorizontalAlignment="Right"
+                            Source="Assets/icons/安全.png" />
+                        <TextBlock
+                            Grid.Column="1"
+                            Margin="20,0,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            FontSize="20"
+                            Foreground="{Binding 检测更新msg颜色}"
+                            Text="{Binding 检测更新msg}" />
+                    </Grid>
+                </Grid>
+            </Border>
+            <Border Background="#2A2B31" Grid.Row="1" Grid.Column="1">
+                <Frame
+                    x:Name="RegisterFrame"
+                    Margin="0"
+                    NavigationUIVisibility="Hidden" />
+            </Border>
+
+        </Grid>
+    </Border>
+</Window>
