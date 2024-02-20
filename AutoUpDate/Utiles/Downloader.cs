@@ -86,7 +86,7 @@ namespace AutoUpDate.Utiles
         private static string GetDownloadListFileAsync()
         {
             HttpClient httpClient = new HttpClient();
-            string url = "https://gitee.com/Shell520/shell/raw/master/admin/ShellToolBox";
+            string url = "https://gitee.com/Shell520/my-auth.-wpf/raw/master/UpdateFile.JSON";
             var response = httpClient.GetAsync(url).Result;
             var result = response.Content.ReadAsStringAsync().Result;
             return result;
