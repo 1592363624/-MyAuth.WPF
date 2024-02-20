@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoUpDate", "AutoUpDate\Au
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedProject", "SharedProject\SharedProject.shproj", "{B24E8072-7F55-49FE-B538-D3A41271F982}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Launcher", "Launcher\Launcher.csproj", "{C4C6248E-01AB-4D55-9911-6EA6541B8C54}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,10 +29,6 @@ Global
 		{1CFAE66F-619C-4D64-B4B7-6277D4F3EFA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CFAE66F-619C-4D64-B4B7-6277D4F3EFA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CFAE66F-619C-4D64-B4B7-6277D4F3EFA7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C4C6248E-01AB-4D55-9911-6EA6541B8C54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C4C6248E-01AB-4D55-9911-6EA6541B8C54}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C4C6248E-01AB-4D55-9911-6EA6541B8C54}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C4C6248E-01AB-4D55-9911-6EA6541B8C54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
