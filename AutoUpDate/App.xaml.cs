@@ -52,7 +52,7 @@ namespace AutoUpDate
                     StaticDataSource.上级调用程序名 = commandLineArgs[1];
                 }
 
-                // 其他启动逻辑...
+
             }
 
 

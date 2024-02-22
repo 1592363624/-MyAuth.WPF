@@ -38,6 +38,9 @@
     <None Remove="Images\transaction_page.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AutoUpDate\AutoUpDate.csproj" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Images\customer_page.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -86,8 +89,5 @@
     <Resource Include="Images\transaction_page.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AutoUpDate\AutoUpDate.csproj" />
   </ItemGroup>
 </Project>

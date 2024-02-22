@@ -1,4 +1,6 @@
-﻿namespace LoginLauncher.ViewModels.MyAuth
+﻿using Newtonsoft.Json;
+
+namespace LoginLauncher.ViewModels.MyAuth
 {
     public class ApiResponse
     {
@@ -7,6 +9,7 @@
         public string? msg { get; set; }
         public string? json { get; set; }
         public string? ip { get; set; }
+        public string? token { get; set; }
         public Ban? Ban { get; set; }
 
     }

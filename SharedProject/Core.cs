@@ -26,6 +26,8 @@ public class Core
             pro.StartInfo.FileName = programPath;
             pro.StartInfo.Arguments = argument;
             pro.Start();
+            Debug.WriteLine("调用程序已启动" + pro.StartInfo.FileName);
+            //return 0;
             // 等待进程结束
             pro.WaitForExit();
             //Visibility = Visibility.Visible;
