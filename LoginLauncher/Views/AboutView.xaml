@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="LoginLauncher.Views.AboutView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:LoginLauncher.Views"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="AboutView"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Background="{DynamicResource MaterialDesignPaper}"
+    FontFamily="{materialDesign:MaterialDesignFont}"
+    Loaded="Page_Loaded"
+    TextElement.FontSize="14"
+    TextElement.FontWeight="Medium"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    mc:Ignorable="d">
+
+    <Grid Background="#2A2B31">
+        <StackPanel Margin="30,0,0,0">
+            <TextBlock
+                Margin="10"
+                FontSize="20"
+                FontWeight="Bold"
+                Foreground="Green"
+                Text="简介" />
+            <TextBlock
+                Margin="10"
+                Foreground="Green"
+                Text="这是一个关于界面，用于展示应用程序的简介信息。" />
+            <TextBlock
+                Margin="10"
+                FontSize="20"
+                FontWeight="Bold"
+                Foreground="Green"
+                Text="声明" />
+            <TextBlock
+                Margin="10"
+                Foreground="Green"
+                Text="本应用程序仅供学习和演示目的使用，不得用于商业用途。" />
+            <TextBlock
+                Margin="10"
+                FontSize="20"
+                FontWeight="Bold"
+                Foreground="Green"
+                Text="联系方式" />
+
+            <StackPanel Orientation="Horizontal">
+
+                <TextBlock Margin="10">
+                    <Hyperlink NavigateUri="mailto:1592363624@qq.com">
+                        如有任何问题或建议，请发送电子邮件至1592363624@qq.com
+                    </Hyperlink>
+                </TextBlock>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Page>

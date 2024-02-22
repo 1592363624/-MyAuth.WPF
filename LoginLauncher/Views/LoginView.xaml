@@ -16,14 +16,14 @@
     mc:Ignorable="d">
 
 
-    <Grid Background="#2A2B31">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
+            <Grid Background="#2A2B31">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
 
-        <TextBox
+                <TextBox
             x:Name="login_user"
             Grid.Row="0"
             Margin="99 33 99 0"
@@ -34,7 +34,7 @@
             Text="{Binding user}" />
 
 
-        <PasswordBox
+                <PasswordBox
             x:Name="login_pass"
             Margin="99 33 99 0"
             FontSize="22"
@@ -45,17 +45,17 @@
             materialDesign:PasswordBoxAssist.Password="{Binding pass}"
             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
 
-        <Button
+                <Button
             Margin="99 55 99 0"
             x:Name="bt_login"
             Height="44"
             FontSize="22"
             Grid.Row="2"
             Click="login_Click">
-            <TextBlock x:Name="txt_login" Text="登录" />
-        </Button>
+                    <TextBlock x:Name="txt_login" Text="登录" />
+                </Button>
 
-    </Grid>
+            </Grid>
 
 
 </Page>

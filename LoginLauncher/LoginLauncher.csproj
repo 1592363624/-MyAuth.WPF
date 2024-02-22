@@ -24,11 +24,6 @@
     <Resource Include="Assets\icons\安全.png" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\RechargeView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <None Update="appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

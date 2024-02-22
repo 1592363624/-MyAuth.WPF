@@ -60,7 +60,7 @@
                         HorizontalContentAlignment="Center"
                         Content="关于"
                         Foreground="#16C675"
-                        Selected="ListBoxItem_Selected" />
+                        Selected="ListBoxItem_Selected_About" />
                 </ListBox>
 
             </Grid>

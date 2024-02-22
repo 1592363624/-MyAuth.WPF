@@ -118,6 +118,11 @@ namespace LoginLauncher
 
             Window_初始化完成();
         }
+
+        private void ListBoxItem_Selected_About(object sender, RoutedEventArgs e)
+        {
+            RegisterFrame.Navigate(new System.Uri("Views/AboutView.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 
 
