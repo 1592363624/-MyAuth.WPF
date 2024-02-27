@@ -9,6 +9,8 @@ using static MaterialDesignThemes.Wpf.Theme;
 using LoginLauncher.Model.MyAuth;
 using System.Windows.Threading;
 using System.Threading.Tasks;
+using LoginLauncher.ViewModels;
+using LoginLauncher.ViewModels.MyAuth;
 
 namespace LoginLauncher.Views
 {
@@ -22,6 +24,7 @@ namespace LoginLauncher.Views
         {
             InitializeComponent();
             DataContext = DataSource.loginData;
+            login_user.DataContext = DataSource.MWVM;
             Loaded += RegisterView_Loaded;
         }
 
@@ -64,7 +67,5 @@ namespace LoginLauncher.Views
                 txt_login.Text = result;
             }
         }
-
-
     }
 }

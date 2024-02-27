@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ using System.Windows.Shapes;
 
 namespace LoginLauncher.Views
 {
+
+
     /// <summary>
     /// AboutView.xaml 的交互逻辑
     /// </summary>
@@ -24,7 +27,10 @@ namespace LoginLauncher.Views
         public AboutView()
         {
             InitializeComponent();
+            DataContext = this;
         }
+
+
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
@@ -39,4 +45,6 @@ namespace LoginLauncher.Views
             trans.BeginAnimation(TranslateTransform.XProperty, anim);
         }
     }
+
+
 }

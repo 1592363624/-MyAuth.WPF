@@ -17,8 +17,10 @@ namespace LoginLauncher.ViewModels.MyAuth
     {
         public string? device_info { get; set; }
         public string? device_code { get; set; }
-        private string? User;
-        public string? user { get => User; set { User = value; PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(user))); } }
+        public string? user { get; set; }
+
+        //private string? User;
+        //public string? user { get => User; set { User = value; PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(user))); } }
         private string? Pass;
         public string? pass { get => Pass; set { Pass = value; PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(pass))); } }
         public string? ckey { get; set; }

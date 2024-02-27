@@ -7,6 +7,11 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.IO;
 using LoginLauncher.Views;
+using LoginLauncher.ViewModels;
+using System.Globalization;
+using System.Windows.Data;
+using System.Windows.Media;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 
 
@@ -26,6 +31,8 @@ namespace LoginLauncher
             myListBox.SelectedIndex = 0;//默认展示第一个登录页面
             image.Visibility = Visibility.Visible;
             DataContext = this;
+            qq_image.DataContext = DataSource.MWVM;
+            txt_cs.DataContext = DataSource.MWVM;
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:LoginLauncher"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewmodels="clr-namespace:LoginLauncher.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
     Title="LoginLauncher"
     Width="700"
     Height="500"
@@ -42,7 +42,7 @@
                         <Style TargetType="ListBoxItem">
                             <Setter Property="Margin" Value="0,0,0,10" />
 
-                            <!--这里的Margin控制间隔-->
+                            <!--  这里的Margin控制间隔  -->
 
                         </Style>
                     </ListBox.ItemContainerStyle>
@@ -78,6 +78,7 @@
                     Background="#2A2B31">
                     <!--  圆形头像  -->
                     <Ellipse
+                        x:Name="qq_image"
                         Width="90"
                         Height="90"
                         Margin="0,25,0,0"
@@ -85,13 +86,18 @@
                         VerticalAlignment="Top">
                         <Ellipse.Fill>
                             <!--  填充网络图片  -->
-                            <ImageBrush ImageSource="Assets/icons/mrtx.png" />
+                            <ImageBrush x:Name="qq_image_url" ImageSource="{Binding Viewdata.UsernameQQ}" />
                         </Ellipse.Fill>
                     </Ellipse>
                 </Border>
-
-
             </Grid>
+
+            <StackPanel>
+                <TextBlock
+                    x:Name="txt_cs"
+                    Background="Red"
+                    Text="{Binding Viewdata.UsernameQQ,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
 
             <!--  右侧列  -->
             <Border
@@ -112,11 +118,12 @@
                         <RowDefinition Height="86" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <Image Visibility="Hidden"
+                    <Image
                         x:Name="image"
                         Grid.Row="0"
                         Margin="0,11,0,0"
-                        Source="Assets/icons/wlyzlogo.png" />
+                        Source="Assets/icons/wlyzlogo.png"
+                        Visibility="Hidden" />
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="200" />
@@ -139,7 +146,10 @@
                     </Grid>
                 </Grid>
             </Border>
-            <Border Background="#2A2B31" Grid.Row="1" Grid.Column="1">
+            <Border
+                Grid.Row="1"
+                Grid.Column="1"
+                Background="#2A2B31">
                 <Frame
                     x:Name="RegisterFrame"
                     Margin="0"

@@ -1,5 +1,6 @@
 ﻿using System;
 using LoginLauncher.Model.MyAuth;
+using LoginLauncher.ViewModels;
 using LoginLauncher.ViewModels.MyAuth;
 using LoginLauncher.ViewModels.MyAuth.Soft;
 using LoginLauncher.Views;
@@ -15,6 +16,8 @@ namespace LoginLauncher
         public static Heart heart = new Heart();
         public static LoginData loginData = new LoginData();
         public static LoginView loginView = new LoginView();
+        public static MWViewModel MWVM = new MWViewModel();
+
 
         public static string Device_info = "null";
         public static string Device_code = "null";

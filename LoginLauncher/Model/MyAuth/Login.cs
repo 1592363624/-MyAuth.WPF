@@ -21,7 +21,7 @@ namespace LoginLauncher.Model.MyAuth
                 {
                     device_info = DataSource.Device_info,
                     device_code = DataSource.Device_code,
-                    user = DataSource.loginView.login_user.Text,
+                    user = DataSource.MWVM.Viewdata.UserQQ,
                     pass = DataSource.loginView.login_pass.Password,
                     ckey = "",
                     timestamp = DataSource.Timestamp
