@@ -92,13 +92,6 @@
                 </Border>
             </Grid>
 
-            <StackPanel>
-                <TextBlock
-                    x:Name="txt_cs"
-                    Background="Red"
-                    Text="{Binding Viewdata.UsernameQQ,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
-            </StackPanel>
-
             <!--  右侧列  -->
             <Border
                 Grid.Row="0"

@@ -32,7 +32,6 @@ namespace LoginLauncher
             image.Visibility = Visibility.Visible;
             DataContext = this;
             qq_image.DataContext = DataSource.MWVM;
-            txt_cs.DataContext = DataSource.MWVM;
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

@@ -6,7 +6,7 @@ namespace LoginLauncher.ViewModels
     public partial class MainWindowViewModel : ObservableRecipient
     {
         //[ObservableProperty]
-        private string usernameQQ = "66666666";
+        private string usernameQQ = "Assets/icons/mrtx.png";
         public string UsernameQQ
         {
             get => usernameQQ;
@@ -24,6 +24,10 @@ namespace LoginLauncher.ViewModels
             get => userQQ;
             set
             {
+                if (value == null)
+                {
+                    UsernameQQ = "Assets/icons/mrtx.png";
+                }
                 UsernameQQ = "http://q2.qlogo.cn/headimg_dl?dst_uin=" + value + "&spec=100";
                 userQQ = value;
                 SetProperty(ref userQQ, value);
