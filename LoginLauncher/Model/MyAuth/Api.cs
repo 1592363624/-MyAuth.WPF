@@ -9,7 +9,7 @@ namespace LoginLauncher.Model.MyAuth
 {
     public class Api
     {
-        public static string apiUrl = "http://150.158.141.18:6401";
+        public static string apiUrl = " ";
 
         // 计算签名
         public static string CalculateSignature(object requestData)

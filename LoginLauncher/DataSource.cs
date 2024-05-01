@@ -25,9 +25,9 @@ namespace LoginLauncher
         public static string? Token;
         public static string Timestamp = Api.GetCurrentTimestamp();
 
-        public static string Skey = "5403ebb3-282d-48e1-9653-e164ee123375";
-        public static string Vkey = "B2647617-6B75-419D-850E-6FA77EACE2FD";
-        public static string gen_key = "gen_key=1234561592363624";
+        public static string Skey = " ";
+        public static string Vkey = " ";
+        public static string gen_key = " ";
     }
 
 }
